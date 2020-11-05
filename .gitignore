@@ -307,3 +307,7 @@ codegen/
 
 # Octave session info
 octave-workspace
+
+# Large file
+Assignment-2.lms
+Assignment-2-data.mat
