@@ -9,6 +9,107 @@
     \end{figure}
 \end{prob}
 \begin{sol}
-    
+    使用Lumerical软件中的Mode来模拟，设置和结果如下：
+    \begin{itemize}
+        \item[(1)] \textbf{Materials \& Structure}：设置$x$坐标在$[-1.5\mu\mathrm{m},1.5\mu\mathrm{m}]$范围内、$y$坐标在$[-0.5\mu\mathrm{m},0.5\mu\mathrm{m}]$、$z$坐标在$[-0.5\mu\mathrm{m},0.5\mu\mathrm{m}]$范围内、折射率为$3.5$的长方体作为芯层；设置$x$坐标在$[-5\mu\mathrm{m},5\mu\mathrm{m}]$范围内、$y$坐标在$[-5.5\mu\mathrm{m},-0.5\mu\mathrm{m}]$、$z$坐标在$[-0.5\mu\mathrm{m},0.5\mu\mathrm{m}]$范围内、折射率为$1.5$的长方体作为衬底. 其余设置默认.
+        \item[(2)] \textbf{FDE}：设置模拟温度为$300$K，求解器类型为“2D Z normal”，背景材料折射率为$1$；设置模拟区域的$x$坐标在$[-3\mu\mathrm{m},3\mu\mathrm{m}]$范围内，$y$坐标在$[-2\mu\mathrm{m},2\mu\mathrm{m}]$范围内，$z$坐标为$0$；设置$x$方向划分网格数$300$，$y$方向划分网格数$200$；设置$x_{\min}$,$x_{\max}$,$y_{\min}$和$y_{\max}$处的边界条件均为PML. 其余设置默认.
+        \item[(3)] \textbf{Run}：设置波长为$1.55\mu\mathrm{m}$，在$n=3.5$附近搜寻模式，共得到$74$个模式，其各参数即模场分布如表\ref{A-2-table}所示.
+        \begin{longtable}[c]{|c|c|c|c|c|}
+            \caption{}
+            \label{A-2-table}\\
+            \hline
+            \begin{tabular}[c]{@{}c@{}}模式序号\\ \#\end{tabular} &
+              \begin{tabular}[c]{@{}c@{}}有效折射率\\ $N$\end{tabular} &
+              \begin{tabular}[c]{@{}c@{}}传播常数\\ $\beta$ / $\mu\mathrm{m}^{-1}$\end{tabular} &
+              $E_x(x,y)$ &
+              $E_y(x,y)$ \\ \hline
+            \endfirsthead
+            %
+            \multicolumn{5}{c}%
+            {{\bfseries Table \thetable\ continued from previous page}} \\
+            \hline
+            \begin{tabular}[c]{@{}c@{}}模式序号\\ \#\end{tabular} &
+              \begin{tabular}[c]{@{}c@{}}有效折射率\\ $N$\end{tabular} &
+              \begin{tabular}[c]{@{}c@{}}传播常数\\ $\beta$ / $\mu\mathrm{m}^{-1}$\end{tabular} &
+              $E_x(x,y)$ &
+              $E_y(x,y)$ \\ \hline
+            \endhead
+            %
+            1 & 3.4250 & 13.8839 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-1-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-1-Ey.png} \\ \hline
+            2 & 3.4078 & 13.8143 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-2-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-2-Ey.png} \\ \hline
+            3 & 3.3959 & 13.7659 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-3-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-3-Ey.png} \\ \hline
+            4 & 3.3810 & 13.7055 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-4-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-4-Ey.png} \\ \hline
+            5 & 3.3468 & 13.5669 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-5-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-5-Ey.png} \\ \hline
+            6 & 3.3359 & 13.5226 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-6-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-6-Ey.png} \\ \hline
+            7 & 3.2770 & 13.2837 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-7-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-7-Ey.png} \\ \hline
+            8 & 3.2718 & 13.2628 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-8-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-8-Ey.png} \\ \hline
+            9 & 3.2225 & 13.0628 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-9-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-9-Ey.png} \\ \hline
+            10 & 3.1922 & 12.9400 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-10-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-10-Ey.png} \\ \hline
+            11 & 3.1870 & 12.9191 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-11-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-11-Ey.png} \\ \hline
+            12 & 3.1850 & 12.9110 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-12-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-12-Ey.png} \\ \hline
+            13 & 3.1460 & 12.7527 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-13-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-13-Ey.png} \\ \hline
+            14 & 3.1392 & 12.7251 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-14-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-14-Ey.png} \\ \hline
+            15 & 3.1167 & 12.6342 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-15-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-15-Ey.png} \\ \hline
+            16 & 3.0822 & 12.4943 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-16-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-16-Ey.png} \\ \hline
+            17 & 3.0712 & 12.4494 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-17-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-17-Ey.png} \\ \hline
+            18 & 3.0655 & 12.4263 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-18-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-18-Ey.png} \\ \hline
+            19 & 3.0643 & 12.4215 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-19-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-19-Ey.png} \\ \hline
+            20 & 2.9980 & 12.1527 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-20-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-20-Ey.png} \\ \hline
+            21 & 2.9653 & 12.0202 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-21-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-21-Ey.png} \\ \hline
+            22 & 2.9535 & 11.9724 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-22-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-22-Ey.png} \\ \hline
+            23 & 2.9261 & 11.8616 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-23-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-23-Ey.png} \\ \hline
+            24 & 2.9063 & 11.7810 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-24-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-24-Ey.png} \\ \hline
+            25 & 2.8617 & 11.6002 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-25-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-25-Ey.png} \\ \hline
+            26 & 2.8397 & 11.5110 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-26-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-26-Ey.png} \\ \hline
+            27 & 2.8263 & 11.4567 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-27-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-27-Ey.png} \\ \hline
+            28 & 2.7986 & 11.3446 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-28-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-28-Ey.png} \\ \hline
+            29 & 2.7927 & 11.3208 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-29-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-29-Ey.png} \\ \hline
+            30 & 2.7643 & 11.2057 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-30-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-30-Ey.png} \\ \hline
+            31 & 2.7531 & 11.1602 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-31-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-31-Ey.png} \\ \hline
+            32 & 2.6849 & 10.8835 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-32-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-32-Ey.png} \\ \hline
+            33 & 2.6843 & 10.8811 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-33-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-33-Ey.png} \\ \hline
+            34 & 2.6633 & 10.7960 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-34-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-34-Ey.png} \\ \hline
+            35 & 2.6439 & 10.7177 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-35-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-35-Ey.png} \\ \hline
+            36 & 2.6280 & 10.6531 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-36-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-36-Ey.png} \\ \hline
+            37 & 2.6136 & 10.5945 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-37-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-37-Ey.png} \\ \hline
+            38 & 2.5703 & 10.4190 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-38-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-38-Ey.png} \\ \hline
+            39 & 2.5691 & 10.4142 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-39-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-39-Ey.png} \\ \hline
+            40 & 2.5444 & 10.3140 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-40-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-40-Ey.png} \\ \hline
+            41 & 2.4922 & 10.1027 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-41-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-41-Ey.png} \\ \hline
+            42 & 2.4859 & 10.0769 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-42-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-42-Ey.png} \\ \hline
+            43 & 2.4714 & 10.0183 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-43-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-43-Ey.png} \\ \hline
+            44 & 2.4210 & 9.8138 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-44-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-44-Ey.png} \\ \hline
+            45 & 2.3922 & 9.6971 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-45-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-45-Ey.png} \\ \hline
+            46 & 2.3742 & 9.6243 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-46-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-46-Ey.png} \\ \hline
+            47 & 2.2968 & 9.3106 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-47-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-47-Ey.png} \\ \hline
+            48 & 2.2931 & 9.2953 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-48-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-48-Ey.png} \\ \hline
+            49 & 2.2687 & 9.1966 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-49-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-49-Ey.png} \\ \hline
+            50 & 2.2549 & 9.1406 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-50-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-50-Ey.png} \\ \hline
+            51 & 2.2477 & 9.1115 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-51-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-51-Ey.png} \\ \hline
+            52 & 2.2333 & 9.0529 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-52-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-52-Ey.png} \\ \hline
+            53 & 2.2242 & 9.0161 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-53-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-53-Ey.png} \\ \hline
+            54 & 2.1663 & 8.7814 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-54-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-54-Ey.png} \\ \hline
+            55 & 2.1251 & 8.6144 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-55-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-55-Ey.png} \\ \hline
+            56 & 2.0910 & 8.4763 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-56-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-56-Ey.png} \\ \hline
+            57 & 2.0369 & 8.2567 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-57-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-57-Ey.png} \\ \hline
+            58 & 2.0253 & 8.2100 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-58-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-58-Ey.png} \\ \hline
+            59 & 1.9955 & 8.0891 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-59-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-59-Ey.png} \\ \hline
+            60 & 1.9553 & 7.9260 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-60-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-60-Ey.png} \\ \hline
+            61 & 1.9456 & 7.8867 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-61-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-61-Ey.png} \\ \hline
+            62 & 1.9241 & 7.7997 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-62-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-62-Ey.png} \\ \hline
+            63 & 1.8725 & 7.5903 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-63-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-63-Ey.png} \\ \hline
+            64 & 1.8326 & 7.4289 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-64-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-64-Ey.png} \\ \hline
+            65 & 1.8229 & 7.3896 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-65-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-65-Ey.png} \\ \hline
+            66 & 1.7911 & 7.2606 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-66-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-66-Ey.png} \\ \hline
+            67 & 1.7402 & 7.0543 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-67-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-67-Ey.png} \\ \hline
+            68 & 1.7116 & 6.9381 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-68-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-68-Ey.png} \\ \hline
+            69 & 1.7085 & 6.9257 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-69-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-69-Ey.png} \\ \hline
+            70 & 1.6977 & 6.8820 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-70-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-70-Ey.png} \\ \hline
+            71 & 1.6020 & 6.4939 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-71-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-71-Ey.png} \\ \hline
+            72 & 1.5619 & 6.3314 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-72-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-72-Ey.png} \\ \hline
+            73 & 1.5617 & 6.3305 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-73-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-73-Ey.png} \\ \hline
+            74 & 1.5498 & 6.2823 & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-74-Ex.png} & \includegraphics[width=.3\columnwidth]{Assignment-2-mode-74-Ey.png} \\ \hline
+        \end{longtable}
+    \end{itemize}
 \end{sol}
 \end{document}
