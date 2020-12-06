@@ -1,0 +1,15 @@
+clc; closeall; clear;
+n = [1.73; 0.17 + 3.0 * 1i; 1.45; 1.33]; # 从左至右各层介质折射率
+f = c / 632.8e-9; # 入射光频率（单位：Hz）
+theta = 0:.1:90; # 遍历入射角（单位：度）
+for(d3 = [0, 10e-9, 30e-9, 50e-9]){ # 遍历第3层介质厚度
+    d = [0; 50e-9; d3; 0]; # 从左至右各层介质厚度（单位：m），其中 0 代表延伸至无穷远
+    RT = stackrt(n, d, f, theta); # 用传输矩阵法计算反射率与折射率
+    visualize(RT);
+    plot(theta, RT.Rp, RT.Tp); # 绘制TM模反射率与折射率关于入射角变化的曲线
+    setplot('y min', -.1);
+    setplot('y max', 1.2);
+    setplot('x label', 'Incident angle: theta / degree');
+    setplot('y label', 'Reflectivity or Transmittance');
+    legend('TM wave Reflectivity R','TM wave Transmittance T');
+}
